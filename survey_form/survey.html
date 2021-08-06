@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../reset.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="survey.css" />
+    <title>Survey</title>
+    <base target="_blank" />
+  </head>
+  <body>
+    <!-- comment -->
+    <div class="content">
+      <header>
+        <div class="container text-center">
+          <h1>Survey Form</h1>
+          <p id="description">
+            <!-- description for form -->
+            This is a survey sample
+            <br />
+            Thank you for your time and input! ☺
+          </p>
+        </div>
+      </header>
+      <form id="form">
+        <div class="form-group">
+          <label id="name-label" for="name" class="form-questions">Name</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            class="form-control"
+            placeholder="Please enter Your Name"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label id="email-label" for="email" class="form-questions"
+            >Email</label
+          >
+          <input
+            type="email"
+            name="email"
+            id="email"
+            class="form-control"
+            placeholder="Please enter valid Email Address"
+          />
+        </div>
+        <div class="form-group">
+          <p class="form-questions">How did you learn about this Survey</p>
+          <select id="dropdown" name="role" class="form-control" required>
+            <option disabled selected value>Please Select</option>
+            <option value="twitter">Twitter</option>
+            <option value="facebook">Facebook</option>
+            <option value="github">GitHub</option>
+            <option value="insta">Instagram</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group radio-group">
+          <p class="form-questions">Please select your age group</p>
+          <label>
+            <input
+              name="user-recommend"
+              value="under"
+              type="radio"
+              class="input-radio"
+              checked
+            />
+            Under 11
+          </label>
+          <label>
+            <input
+              name="user-recommend"
+              value="11"
+              type="radio"
+              class="input-radio"
+              checked
+            />
+            11 - 14
+          </label>
+          <label>
+            <input
+              name="user-recommend"
+              value="15"
+              type="radio"
+              class="input-radio"
+            />
+            15 - 24
+          </label>
+          <label>
+            <input
+              name="user-recommend"
+              value="25"
+              type="radio"
+              class="input-radio"
+            />
+            25 - 39
+          </label>
+          <label>
+            <input
+              name="user-recommend"
+              value="above"
+              type="radio"
+              class="input-radio"
+              checked
+            />
+            Above 40
+          </label>
+        </div>
+        <div class="form-group">
+          <p class="form-questions">Enter your favorite tool</p>
+          <input list="ide" class="form-control" placeholder="Please Select" />
+
+          <datalist id="ide">
+            <option value="Visual Studio Code" />
+            <option value="Atom" />
+            <option value="Sublime Text" />
+          </datalist>
+        </div>
+        <section class="form-group">
+          <span class="form-questions">
+            Please select your preferred form of contact
+            <span class="clue">(Check all that apply)</span>
+          </span>
+
+          <br />
+          <div>
+            <input
+              type="checkbox"
+              name="contact"
+              id="twitter"
+              value="twitter"
+            />
+            <label for="twitter">Twitter</label>
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              name="contact"
+              id="facebook"
+              value="facebook"
+            />
+            <label for="facebook">Facebook</label>
+          </div>
+          <div>
+            <input type="checkbox" name="contact" id="insta" value="insta" />
+            <label for="insta">Instagram</label>
+          </div>
+          <div>
+            <input type="checkbox" name="contact" id="other" value="other" />
+            <label for="other">Other</label>
+          </div>
+        </section>
+        <section class="form-group">
+          <table>
+            <p class="form-questions">Rate your experience</p>
+            <thead>
+              <tr>
+                <th scope="col"></th>
+                <th scope="col">Dissatisfied</th>
+                <th scope="col">Neutral</th>
+                <th scope="col">Satisfied</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="row-details">
+                <td>Page Questions</td>
+                <td class="row-select">
+                  <input type="radio" name="question" id="dis" value="dis" />
+                </td>
+                <td class="row-select">
+                  <input type="radio" name="question" id="neu" value="neu" />
+                </td>
+                <td class="row-select">
+                  <input type="radio" name="question" id="sat" value="sat" />
+                </td>
+              </tr>
+              <tr class="row-details">
+                <td>Page Quality</td>
+                <td class="row-select">
+                  <input type="radio" name="quality" id="dis" value="dis" />
+                </td>
+                <td class="row-select">
+                  <input type="radio" name="quality" id="neu" value="neu" />
+                </td>
+                <td class="row-select">
+                  <input type="radio" name="quality" id="sat" value="sat" />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <div class="form-group">
+          <p class="form-questions">Any comments or suggestions?</p>
+          <textarea
+            id="comments"
+            class="input-textarea"
+            name="comment"
+            placeholder="Enter your comment here..."
+          ></textarea>
+        </div>
+        <button type="submit" id="submit">
+          <span class="submit-button">Submit</span>
+        </button>
+      </form>
+    </div>
+    <div id="footer"></div>
+  </body>
+</html>
